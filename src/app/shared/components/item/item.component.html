@@ -1,0 +1,11 @@
+<ng-container>
+  <div class="card">
+    <img [src]="location?.img" [alt]="location?.name" appImgOpacity />
+    <div class="text">
+      <h1 appFocus>
+        {{ location?.name }}
+      </h1>
+      <h3>{{ location?.date | date: "short" }}</h3>
+    </div>
+  </div>
+</ng-container>

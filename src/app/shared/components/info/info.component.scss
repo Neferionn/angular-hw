@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  .row {
+    justify-content: center;
+    padding: 5rem;
+    margin: 5rem;
+
+    h1 {
+      padding: 2rem;
+
+      font-size: 3rem;
+    }
+  }
+}

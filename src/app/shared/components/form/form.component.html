@@ -1,0 +1,55 @@
+<form [formGroup]="form" (submit)="submitForm()">
+  <mat-form-field appearance="fill">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name" />
+  </mat-form-field>
+  <div
+    class="error-message"
+    *ngIf="
+      getFormParam('name')?.invalid &&
+      (getFormParam('name')?.dirty || getFormParam('name')?.touched)
+    "
+  >
+    <mat-error> {{ showError("name", "Name") }}</mat-error>
+  </div>
+
+  <mat-divider></mat-divider>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" formControlName="email" />
+  </mat-form-field>
+  <div
+    class="error-message"
+    *ngIf="
+      getFormParam('email')?.invalid &&
+      (getFormParam('email')?.dirty || getFormParam('email')?.touched)
+    "
+  >
+    <mat-error> {{ showError("email", "Email") }}</mat-error>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-form-field appearance="fill">
+    <mat-label>Age</mat-label>
+    <input matInput formControlName="age" />
+  </mat-form-field>
+  <div
+    class="error-message"
+    *ngIf="
+      getFormParam('age')?.invalid &&
+      (getFormParam('age')?.dirty || getFormParam('age')?.touched)
+    "
+  >
+    <mat-error> {{ showError("age", "Age") }}</mat-error>
+  </div>
+  <mat-divider></mat-divider>
+
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    class="button"
+    [disabled]="!form.valid"
+  >
+    Submit
+  </button>
+</form>

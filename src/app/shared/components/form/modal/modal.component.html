@@ -1,0 +1,20 @@
+<div class="data" *ngIf="data">
+  <h1 mat-dialog-title>DATA FROM FORM</h1>
+  <div class="row">
+    <div>
+      <h2>
+        Name: <span> {{ data.name | capitalize }} </span>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        Email: <span>{{ data.email }}</span>
+      </h2>
+    </div>
+    <div>
+      <h2>
+        Age: <span>{{ data.age }}</span>
+      </h2>
+    </div>
+  </div>
+</div>
